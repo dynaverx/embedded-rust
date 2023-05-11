@@ -8,5 +8,5 @@ cd rust
 cargo new --bin gtkPeta
 cd gtkPeta
 unset PKG_CONFIG_PATH
-pkg-config --modversion gtk+-3.0
+pkg-config --modversion gtk+-3.0 #3.24.37
 
