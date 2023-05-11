@@ -1,0 +1,19 @@
+[build]
+target = "arm-unknown-linux-gnueabihf"
+
+[target.arm-unknown-linux-gnueabihf]
+linker = "arm-xilinx-linux-gnueabi-gcc"
+ar = "arm-xilinx-linux-gnueabi-ar"
+rustflags = [
+  "-C","target-feature=a9,armv7-a,neon",
+  "-C","target-cpu=cortex-a9",
+  "-C","link-arg=-mcpu=cortex-a9",
+  "-C","link-arg=-Wl,-soname=lib${NAME}.${VERSION}",
+  "-C","link-arg=--sysroot=/home/vincent/local/sdk2019.1/sysroots/cortexa9t2hf-neon-xilinx-linux-gnueabi",
+  "-C","link-arg=-Wl,--dynamic-linker=/lib/ld-linux-armhf.so.3"
+]
+
+[profile.release]
+opt-level = "z"
+lto = true
+debug = false
