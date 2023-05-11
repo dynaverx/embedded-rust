@@ -9,4 +9,6 @@ cargo new --bin gtkPeta
 cd gtkPeta
 unset PKG_CONFIG_PATH
 pkg-config --modversion gtk+-3.0 #3.24.37
+cargo install cross --git https://github.com/cross-rs/cross
+
 
