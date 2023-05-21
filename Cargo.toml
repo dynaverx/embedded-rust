@@ -9,7 +9,7 @@ rustflags = [
   "-C","target-cpu=cortex-a9",
   "-C","link-arg=-mcpu=cortex-a9",
   "-C","link-arg=-Wl,-soname=lib${NAME}.${VERSION}",
-  "-C","link-arg=--sysroot=/home/vincent/local/sdk2019.1/sysroots/cortexa9t2hf-neon-xilinx-linux-gnueabi",
+  "-C","link-arg=--sysroot=/home/cortexa9t2hf-neon-xilinx-linux-gnueabi",
   "-C","link-arg=-Wl,--dynamic-linker=/lib/ld-linux-armhf.so.3"
 ]
 
